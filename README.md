@@ -8,3 +8,8 @@
 Use this button to automatically deploy this web app as your own Azure App
 
 <a href="https://azuredeploy.net/" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
+
+
+## Credits
+
+ * This practice demo project is based on the [ContosoUniversity on ASP.NET Core 2.0 on .NET Core and Razor Pages](https://github.com/jbogard/ContosoUniversityDotNetCore-Pages) by Jimmy Bogard (MIT licensed)
