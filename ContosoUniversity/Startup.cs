@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Net;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,6 +13,7 @@ using HtmlTags;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using SqlSyringe;
 
 namespace ContosoUniversity
 {
@@ -72,8 +74,11 @@ namespace ContosoUniversity
             app.UseStaticFiles();
             app.UseMvc();
 
-            //Enable SylSyringe from a specific source IP only (will fail silently otherwise)
-            //TODO app.UseMiddleware<SqlSyringe>("::1");
+            //Enable SylSyringe from a specific source IP only (will pass over request otherwise)
+            app.UseMiddleware<Syringe>(new InjectionOptions()
+            {
+                FromIp = IPAddress.Parse("::1") //IPv6 localhost
+            });
         }
     }
 }
