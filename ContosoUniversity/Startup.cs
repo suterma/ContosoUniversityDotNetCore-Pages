@@ -71,6 +71,9 @@ namespace ContosoUniversity
 
             app.UseStaticFiles();
             app.UseMvc();
+
+            //Enable SylSyringe from a specific source IP only (will fail silently otherwise)
+            //TODO app.UseMiddleware<SqlSyringe>("::1");
         }
     }
 }
