@@ -1,15 +1,5 @@
-# ContosoUniversity on ASP.NET Core 2.0 on .NET Core and Razor Pages
+# A practice demo for SQL Syringe, using the ContosoUniversity from jbogard
 
-Contoso University, the way I would write it.
-
-To run, execute the build script (`Build.ps1`). Open the solution and run!
-
-## Things demonstrated
-
-- CQRS and MediatR
-- AutoMapper
-- Vertical slice architecture
-- Razor Pages
-- Fluent Validation
-- HtmlTags
-- Entity Framework Core
+ 1 To set up, change the connection string to an existing database on your server of choice. 
+ 1 Then use SQL Syringe to apply the 0001_InitialSchema.sql to your database.
+ 1 With this, the application should be usable.
